@@ -1,0 +1,10 @@
+title: Nishendra Lakshitha
+description: Network Engineer | Fortinet NSE 7 | Cisco | Linux | Proxmox
+url: "https://nlkgithub.github.io"
+baseurl: ""
+author: Nishendra Lakshitha
+permalink: /blog/:title/
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

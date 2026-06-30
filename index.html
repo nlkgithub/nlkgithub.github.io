@@ -1,0 +1,107 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="badge">👋 Hello, I'm</div>
+    <h1>Nishendra <span>Lakshitha</span></h1>
+    <h2>Network Engineer | Fortinet NSE 7 | Cisco | Linux | Proxmox</h2>
+    <p>
+      I design, deploy and troubleshoot secure, reliable and scalable network solutions.
+      This blog is where I share real-world experiences, configuration guides, labs and automation scripts.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn primary" href="/resume/">📄 View My Resume</a>
+      <a class="btn" href="/contact/">✉️ Contact Me</a>
+      <a class="btn" href="/assets/Nishendra-Lakshitha-CV.pdf">⬇ Download CV</a>
+    </div>
+
+    <div class="socials">
+      <span>Connect with me</span>
+      <a href="#" title="LinkedIn">in</a>
+      <a href="#" title="GitHub">GH</a>
+      <a href="#" title="YouTube">▶</a>
+      <a href="mailto:nishendralakshithak@gmail.com">✉</a>
+    </div>
+  </div>
+
+  <div class="network-map">
+    <div class="globe"></div>
+    <div class="node internet">☁<span>Internet</span></div>
+    <div class="node dc">▤<span>Data Center</span></div>
+    <div class="node vpn">🔒<span>VPN</span></div>
+    <div class="node fw">▦🔥<span>Firewall</span></div>
+    <div class="node lan">🖧<span>LAN</span></div>
+    <div class="node wifi">📶<span>Wireless</span></div>
+    <div class="line l1"></div><div class="line l2"></div><div class="line l3"></div>
+    <div class="line l4"></div><div class="line l5"></div><div class="line l6"></div>
+  </div>
+</section>
+
+<section class="skills">
+  <div class="skill-card">🔌 <div><h3>Network Design</h3><p>Secure & scalable architecture</p></div></div>
+  <div class="skill-card">🛡️ <div><h3>Security</h3><p>Firewalls, VPN, IDS/IPS</p></div></div>
+  <div class="skill-card">💻 <div><h3>Automation</h3><p>Python, Ansible, Shell</p></div></div>
+  <div class="skill-card">📊 <div><h3>Monitoring</h3><p>LibreNMS, Checkmk, Grafana</p></div></div>
+  <div class="skill-card">📦 <div><h3>Virtualization</h3><p>Proxmox, VMware, Docker</p></div></div>
+  <div class="skill-card">📡 <div><h3>Wireless & IPTV</h3><p>WiFi, IPTV, Multicast</p></div></div>
+</section>
+
+<div class="main-grid">
+  <section class="panel">
+    <div class="section-head">
+      <h2>Latest Articles</h2>
+      <a href="/blog/">View all posts →</a>
+    </div>
+
+    <div class="article-grid">
+      {% for post in site.posts limit:4 %}
+      <article class="article-card">
+        <div class="article-image {{ post.image_class | default: 'img-default' }}">
+          <span>{{ post.image_text | default: post.categories.first }}</span>
+        </div>
+        <div class="article-body">
+          <span class="tag">{{ post.categories.first | upcase }}</span>
+          <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 110 }}</p>
+          <small>{{ post.read_time | default: "6 min read" }} · 👁 {{ post.views | default: "18" }}</small>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <aside>
+    <section class="panel about-card">
+      <h2>👨‍💻 About Me</h2>
+      <div class="avatar">NL</div>
+      <p>
+        I'm a Network Engineer based in UAE with 6+ years of experience in designing,
+        securing and maintaining IT infrastructure.
+      </p>
+      <p>📍 Dubai, UAE</p>
+      <p>✉️ nishendralakshithak@gmail.com</p>
+    </section>
+
+    <section class="panel cert-card">
+      <h2>🏆 Certifications</h2>
+      <div class="certs">
+        <div>NSE 7</div>
+        <div>CCNP</div>
+        <div>CCNA</div>
+      </div>
+      <a class="btn full" href="/certifications/">View All Certifications →</a>
+    </section>
+  </aside>
+</div>
+
+<section class="stats panel">
+  <div>📖 <strong>25+</strong><span>Blog Posts</span></div>
+  <div>💻 <strong>15+</strong><span>Lab Guides</span></div>
+  <div>🗄️ <strong>10+</strong><span>Projects</span></div>
+  <div>💡 <strong>6+ Years</strong><span>Experience</span></div>
+</section>

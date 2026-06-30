@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  {% seo %}
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span>NL</span><div><strong>Nishendra Lakshitha</strong><small>Network Engineer</small></div></a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/projects/">Projects</a>
+      <a href="/labs/">Labs</a>
+      <a href="/certifications/">Certifications</a>
+      <a href="/resume/">Resume</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="search-box">⌕ Search...</div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>© {{ "now" | date: "%Y" }} Nishendra Lakshitha · Built with GitHub Pages</p>
+  </footer>
+</body>
+</html>

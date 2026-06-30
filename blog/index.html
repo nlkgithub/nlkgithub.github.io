@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+---
+
+<section class="panel">
+  <h1>Blog</h1>
+  <p class="hero p">Network engineering guides, troubleshooting notes and lab documentation.</p>
+  <div class="article-grid">
+    {% for post in site.posts %}
+    <article class="article-card">
+      <div class="article-image {{ post.image_class | default: 'img-default' }}"><span>{{ post.image_text | default: post.categories.first }}</span></div>
+      <div class="article-body">
+        <span class="tag">{{ post.categories.first | upcase }}</span>
+        <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
